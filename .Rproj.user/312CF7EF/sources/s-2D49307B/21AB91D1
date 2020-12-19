@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1608416725897.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "362924318",
+    "id" : "21AB91D1",
+    "lastKnownWriteTime" : 1594571935,
+    "last_content_update" : 1594571935,
+    "path" : "~/Projects/Website/Staging 2/content/post/2020-07-12-subreddit-sentiment-analysis.en.Rmd",
+    "project_path" : "content/post/2020-07-12-subreddit-sentiment-analysis.en.Rmd",
+    "properties" : {
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

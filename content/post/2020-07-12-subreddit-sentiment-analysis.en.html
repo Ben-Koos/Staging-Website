@@ -1,0 +1,41 @@
+---
+title: Subreddit Sentiment Analysis
+author: Ben Koos
+date: '2020-07-12'
+slug: subreddit-sentiment-analysis
+categories: []
+tags:
+  - Sentiment-Analysis NLP Reddit
+type: ''
+subtitle: ''
+image: ''
+---
+
+
+
+<div id="set-of-words" class="section level2">
+<h2>Set of words</h2>
+<p>Words words words Words words wordsWords words words Words words words Words words words Words words words Words words words Words words wordsWords words words Words words words Words words words Words words words Words words words Words words wordsWords words words Words words words Words words words Words words words Words words words Words words wordsWords words words Words words words Words words words Words words words Words words words Words words wordsWords words words Words words words Words words words Words words words Words words words Words words wordsWords words words Words words words Words words words Words words words</p>
+<p><img src="/post/2020-07-12-subreddit-sentiment-analysis.en_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>topSubsSubDaily = topSubs %&gt;% 
+  group_by(Subreddit, Day) %&gt;% 
+  filter(NumWords&gt;=30) %&gt;% 
+  summarise( Polarity_weighted = weighted.mean(Polarity,Comment.Score),
+             Polarity_mean = mean(Polarity)) %&gt;% 
+  mutate(Date = as.Date(as.numeric(Day), origin = &quot;2016-01-01&quot;)  )
+
+topSubsSubDaily %&gt;% 
+  filter(Subreddit %in% Subs) %&gt;% 
+  ggplot() + 
+  geom_smooth(aes(x=Date,y = Polarity_mean,group=Subreddit,color=Subreddit),
+            size =1.6 , se = F) +
+  geom_line(aes(x=Date, y = Polarity_mean,group=Subreddit, color = Subreddit),
+            size =.6,alpha = .5 ) +
+  scale_colour_brewer(palette = &quot;Set1&quot;) +
+  theme(panel.background = element_blank(),
+        panel.grid.major = element_line(color = &#39;grey&#39;,linetype = &#39;dashed&#39;),
+        axis.text = element_text(color =&#39;#4a4947&#39;,face=&#39;bold&#39;))</code></pre>
+<p><img src="/post/2020-07-12-subreddit-sentiment-analysis.en_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="/post/2020-07-12-subreddit-sentiment-analysis.en_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/post/2020-07-12-subreddit-sentiment-analysis.en_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>

@@ -1,0 +1,80 @@
+---
+title: spread of covid 19 update
+author: Ben Koos
+date: '2020-12-13'
+slug: spread-of-covid-19-update
+categories: []
+tags:
+  - COVID-19
+  - Interactive
+  - Map
+type: ''
+subtitle: ''
+image: ''
+---
+
+```{r include = F}
+require(ggplot2)
+require(dplyr)
+require(reshape2)
+```
+
+# Comparison of Cases
+
+```{r echo = F}
+
+covid_data = read.csv("C:\\Users\\Ben Koos\\Documents\\Projects\\COVID 19\\Output\\2020-12-13-COVID Data Combined.csv")
+
+NumCases = covid_data %>% 
+  group_by( date , voteD) %>% 
+  summarize( cases   = sum(cases),
+             tot_pop = sum(pop, na.rm = T),
+             cpp     = as.character(signif(cases/tot_pop*100000,3))) %>% 
+  dcast(  date ~ voteD  , value.var = c('cpp')) 
+
+colnames(NumCases) = c("date", "repub" , "demo")
+
+NumCases$Ratio = as.numeric(NumCases$demo)/as.numeric(NumCases$repub)
+
+ggplot( filter(NumCases, !is.na(Ratio))) + 
+  geom_line(aes(x= as.Date(date), y = Ratio), color = '#49514a', size = 1.6) +
+  scale_x_date( date_labels = "%b %Y" , date_breaks = "1 month", expand = c(0,0)) + 
+  scale_y_continuous( breaks = c(0:6), expand = c(0,0)) + 
+  theme( axis.text.x = element_text(angle = 45, vjust = .5),
+         panel.background = element_blank(),
+         panel.grid.major.x = element_line(color = "#ceb69d"),
+         panel.grid.major.y = element_line(color = "#ceb69d"),
+         plot.title = element_text(hjust = .5)) +
+  labs( y = "Ratio", x = "" , title = "Ratio of per Capita COVID-19 Cases\nStates that Voted for Clinton vs. States that Voted for Trump (2016)")
+
+```
+
+
+# Comparison of Death 
+
+```{r echo = F}
+
+NumCases = covid_data %>% 
+  group_by( date , voteD) %>% 
+  summarize( deaths   = sum(deaths),
+             tot_pop = sum(pop, na.rm = T),
+             dpp     = as.character(signif(deaths/tot_pop*100000,3))) %>% 
+  dcast(  date ~ voteD  , value.var = c('dpp')) 
+
+colnames(NumCases) = c("date", "repub" , "demo")
+
+NumCases$Ratio = as.numeric(NumCases$demo)/as.numeric(NumCases$repub)
+
+ggplot( filter(NumCases, !is.na(Ratio))) + 
+  geom_line(aes(x= as.Date(date), y = Ratio), color = '#49514a', size = 1.6) +
+  scale_x_date( date_labels = "%b %Y" , date_breaks = "1 month", expand = c(0,0)) + 
+  scale_y_continuous( breaks = c(0:8), expand = c(0,0) ) + 
+  theme( axis.text.x = element_text(angle = 45, vjust = .5),
+         panel.background = element_blank(),
+         panel.grid.major.x = element_line(color = "#ceb69d"),
+         panel.grid.major.y = element_line(color = "#ceb69d"),
+         plot.title = element_text(hjust = .5)) +
+  labs( y = "Ratio", x = "" , title = "Ratio of per Capita COVID-19 Cases\nStates that Voted for Clinton vs. States that Voted for Trump (2016)") + 
+  ylim(0,8)
+
+```

@@ -5,13 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2183878187",
+    "hash" : "0",
     "id" : "31BF82BF",
     "lastKnownWriteTime" : 1590866661,
     "last_content_update" : 1590866661,
     "path" : "~/Projects/Website/Staging 2/content/post/2020-05-30-spread-of-covid-19.en.Rmd",
     "project_path" : "content/post/2020-05-30-spread-of-covid-19.en.Rmd",
     "properties" : {
+        "cursorPosition" : "15,0",
+        "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [

@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>ben2koos@gmail.com (Ben Koos)</managingEditor>
     <webMaster>ben2koos@gmail.com (Ben Koos)</webMaster>
-    <lastBuildDate>Sat, 30 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>COVID-19</title>
       <link>/tags/covid-19/</link>
-      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
       <author>ben2koos@gmail.com (Ben Koos)</author>
       <guid>/tags/covid-19/</guid>
       <description></description>
@@ -20,7 +20,7 @@
     <item>
       <title>Interactive</title>
       <link>/tags/interactive/</link>
-      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
       <author>ben2koos@gmail.com (Ben Koos)</author>
       <guid>/tags/interactive/</guid>
       <description></description>
@@ -29,9 +29,18 @@
     <item>
       <title>Map</title>
       <link>/tags/map/</link>
-      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
       <author>ben2koos@gmail.com (Ben Koos)</author>
       <guid>/tags/map/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sentiment-Analysis NLP Reddit</title>
+      <link>/tags/sentiment-analysis-nlp-reddit/</link>
+      <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
+      <author>ben2koos@gmail.com (Ben Koos)</author>
+      <guid>/tags/sentiment-analysis-nlp-reddit/</guid>
       <description></description>
     </item>
     
