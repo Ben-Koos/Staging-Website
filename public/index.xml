@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>ben2koos@gmail.com (Ben Koos)</managingEditor>
     <webMaster>ben2koos@gmail.com (Ben Koos)</webMaster>
-    <lastBuildDate>Mon, 20 Mar 2017 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spread of COVID-19</title>
+      <link>/post/spread-of-covid-19/</link>
+      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      <author>ben2koos@gmail.com (Ben Koos)</author>
+      <guid>/post/spread-of-covid-19/</guid>
+      <description>If you play around with the slider on the interactive chart below you can see how COVID-19 spread throughout the contiguous United States.
+(Note: if you are viewing this in mobile, the frame below is probably wider than the text in the rest of this post. This is my first post and I’m a newbie at HTML. If anyone knows how to make an iframe look good on both mobile and desktop simultenously, I’d love to learn from you!</description>
+    </item>
+    
     <item>
       <title>Photoswipe Gallery Sample</title>
       <link>/post/2017-03-20-photoswipe-gallery-sample/</link>

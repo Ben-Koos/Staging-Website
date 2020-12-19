@@ -1,0 +1,68 @@
+---
+title: Spread of COVID-19
+author: Ben Koos
+date: '2020-05-30'
+slug: spread-of-covid-19
+categories: []
+tags:
+  - COVID-19
+  - Interactive
+  - Map
+  - Politics
+type: ''
+subtitle: ''
+image: ''
+---
+
+
+
+If you play around with the slider on the interactive chart below you can see how COVID-19 spread throughout the contiguous United States.
+
+(Note: if you are viewing this in mobile, the frame below is probably wider than the text in the rest of this post. This is my first post and I'm a newbie at HTML. If anyone knows how to make an iframe look good on both mobile and desktop simultenously, I'd love to learn from you!)
+<iframe src = "https://ben-koos.shinyapps.io/static-covid-map/" width = 760 height = 600px ></iframe>
+
+When I made these charts, the first thing I noticed was how much faster the disease spread in coastal areas of the United States. Even in May, there are still numerous counties in the center of the country that haven't reported a single case of COVID-19.
+
+Perhaps states with (1) more urban population and (2) more connected internationally would be hit harder by the disease. These states also tend to vote Democrat. Below you can compare the spread, total cases and cases per captia of COVID-19 in states that voted Democrat vs. Republican in the 2016 presidential election. 
+
+<iframe src = "https://ben-koos.shinyapps.io/covid-map-by-party/" width = 760 height = 1000px></iframe>
+
+
+```{r include = F}
+require(ggplot2)
+require(dplyr)
+require(reshape2)
+```
+
+By March 5th, 2020, just as the total number of cases in the contiguous United States was reaching the 100s, states that voted for Clinton in 2016 began to report a greater number of cases per capita than states that voted for Trump. The ratio skyrockedted to over 5:1 by the end of March and is still above 4:1 at the end of May.  
+
+```{r echo = F}
+
+covid_data = read.csv("C:\\Users\\Ben Koos\\Documents\\Projects\\COVID 19\\Output\\COVID Data Combined.csv")
+
+NumCases = covid_data %>% 
+  group_by( date , voteD) %>% 
+  summarize( cases   = sum(cases),
+             tot_pop = sum(pop, na.rm = T),
+             cpp     = as.character(signif(cases/tot_pop*100000,3))) %>% 
+  dcast(  date ~ voteD  , value.var = c('cpp')) 
+
+colnames(NumCases) = c("date", "repub" , "demo")
+
+NumCases$Ratio = as.numeric(NumCases$demo)/as.numeric(NumCases$repub)
+
+ggplot( filter(NumCases, !is.na(Ratio))) + 
+  geom_line(aes(x= as.Date(date), y = Ratio), color = '#49514a', size = 1.6) +
+  scale_x_date( date_labels = "%B %d, %Y" , date_breaks = "2 weeks", expand = c(0,0)) + 
+  scale_y_continuous( breaks = c(0:6)) + 
+  theme( axis.text.x = element_text(angle = 45, vjust = .5),
+         panel.background = element_blank(),
+         panel.grid.major.x = element_line(color = "#ceb69d"),
+         panel.grid.major.y = element_line(color = "#ceb69d"),
+         plot.title = element_text(hjust = .5)) +
+  labs( y = "Ratio", x = "" , title = "Ratio of per Capita COVID-19 Cases\nStates that Voted for Clinton vs. States that Voted for Trump")
+
+```
+
+
+Of course no causal inference ought to be made from this correlation. It's very unlikely that any policy made by governments in states that voted for Clinton has caused the greater density of COVID-19 cases. It's more plausible that it's a result of greater urbanization and international connectedness in these states. I have to wonder, on a polictical level, whether this difference in incidence severity partially explains why Republican's seem more eager to reopen their states for business.     
