@@ -13,13 +13,30 @@ subtitle: ''
 image: ''
 ---
 
+ 
 ```{r include = F}
 require(ggplot2)
 require(dplyr)
 require(reshape2)
 ```
 
-# Comparison of Cases
+
+# Covid Update 
+ 
+The two gifs show the spread of Covid-19 from the date of the first reported case (January 21, 2020) to December 12, 2020, and the total fatalities per country between the first reported covid death (February 29, 2020) to December 12, 2020, respectively. The virus spread more rapidly, and killed more in densley populated urban areas. It took significantly longer for covid to infect midwestern states.  
+
+### Covid Spread
+Covid 19 spread rapidly. 
+
+![Covid Update](\post\2020-12-13-spread-of-covid-19-update.en_files\gifs\Dec 12 2020 Update.gif)
+
+## Covid Death  
+![Covid Death](\post\2020-12-13-spread-of-covid-19-update.en_files\gifs\Dec 12 2020 Death.gif)
+
+
+### Comparison of Cases
+
+Initially, covid spread and killed mostly in states that eventually voted for Joe Biden in 2020. The ratios in the two charts below are adjusted for population. Meaning the per capita death rate was briefly over 8:1 in April of 2020. However, though initially much worse in blue states, this ratio has steadly evened out. By December of 2020, this ratio of per capita cases in blue states to per capita cases in red states was around 1.5 and the ratio of per capita deaths was just over 2.    
 
 ```{r echo = F}
 
@@ -45,16 +62,17 @@ ggplot( filter(NumCases, !is.na(Ratio))) +
          panel.grid.major.x = element_line(color = "#ceb69d"),
          panel.grid.major.y = element_line(color = "#ceb69d"),
          plot.title = element_text(hjust = .5)) +
-  labs( y = "Ratio", x = "" , title = "Ratio of per Capita COVID-19 Cases\nStates that Voted for Clinton vs. States that Voted for Trump (2016)")
+  labs( y = "Ratio", x = "" , title = "Ratio of per Capita COVID-19 Cases\nStates that Voted for Biden vs. States that Voted for Trump (2016)")
 
 ```
 
 
-# Comparison of Death 
+### Comparison of Death 
 
 ```{r echo = F}
 
 NumCases = covid_data %>% 
+  filter( date >= as.Date("2020-3-10")) %>%
   group_by( date , voteD) %>% 
   summarize( deaths   = sum(deaths),
              tot_pop = sum(pop, na.rm = T),
@@ -68,13 +86,12 @@ NumCases$Ratio = as.numeric(NumCases$demo)/as.numeric(NumCases$repub)
 ggplot( filter(NumCases, !is.na(Ratio))) + 
   geom_line(aes(x= as.Date(date), y = Ratio), color = '#49514a', size = 1.6) +
   scale_x_date( date_labels = "%b %Y" , date_breaks = "1 month", expand = c(0,0)) + 
-  scale_y_continuous( breaks = c(0:8), expand = c(0,0) ) + 
+  scale_y_continuous( breaks = c(0:8), expand = c(0,0),limits = c(0,10) ) + 
   theme( axis.text.x = element_text(angle = 45, vjust = .5),
          panel.background = element_blank(),
          panel.grid.major.x = element_line(color = "#ceb69d"),
          panel.grid.major.y = element_line(color = "#ceb69d"),
          plot.title = element_text(hjust = .5)) +
-  labs( y = "Ratio", x = "" , title = "Ratio of per Capita COVID-19 Cases\nStates that Voted for Clinton vs. States that Voted for Trump (2016)") + 
-  ylim(0,8)
+  labs( y = "Ratio", x = "" , title = "Ratio of per Capita COVID-19 Cases\nStates that Voted for Biden vs. States that Voted for Trump (2016)") 
 
 ```
