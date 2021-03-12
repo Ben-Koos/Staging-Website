@@ -1,0 +1,42 @@
+---
+title: COVID County Health Regression
+author: Ben Koos
+date: '2021-03-11'
+slug: covid-county-health-regression
+categories: []
+tags:
+  - COVID-19
+  - Regression
+  - Regression Tree
+type: ''
+subtitle: ''
+image: ''
+---
+
+
+This is a fatality map 
+
+![COVID Fatality Rate Map](\post\Images\Death Per Case Map.png)
+
+This is a case per capita map 
+
+![COVID Case per Capita Map](\post\Images\Case per Capita Map.png)
+
+
+This is a fatality rate correlations  
+
+![Death per Case Correlations](\post\Images\DPC Correlations.png)
+
+
+This is a case per captia correlations 
+
+
+![Case per Capita Correlations](\post\Images\CPC Correlations.png)
+
+This is a fatality rate regression tree   
+
+![Death per Case Regression Tree](\post\Images\DPC Tree.png)
+
+This is a case per captia regression tree  
+
+![Case per Capita Regression Tree](\post\Images\CPC Tree.png)

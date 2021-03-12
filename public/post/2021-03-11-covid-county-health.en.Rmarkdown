@@ -1,0 +1,19 @@
+---
+title: covid county health
+author: Ben Koos
+date: '2021-03-11'
+slug: covid-county-health
+categories: []
+tags:
+  - regression
+  - COVID-19
+type: ''
+subtitle: ''
+image: ''
+---
+
+## Title 
+
+This is a fatality map 
+
+![COVID Fatality Map](post\2021-03-11-county-health-regression\Death Per Case Map.png)

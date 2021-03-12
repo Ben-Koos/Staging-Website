@@ -1,0 +1,44 @@
+---
+title: 'County Level Health and COVID-19 '
+author: Ben Koos
+date: '2021-03-11'
+slug: county-level-health-and-covid-19
+categories: []
+tags:
+  - COVID-19
+  - Regression
+  - Regression Tree
+type: ''
+subtitle: ''
+image: ''
+---
+
+
+
+## R Markdown
+
+This is a fatality map 
+
+![COVID Fatality Map](static\post\2021-03-11-county-level-health-and-covid-19.en_files\Death Per Case Map.png)
+
+This is a case per capita map 
+
+![COVID Case per Capita Map](post\2021-03-11-county-level-health-and-covid-19.en_files\Case Per Capita Map.png)
+
+This is a fatality rate correlations  
+
+![Death per Case Correlations](post\2021-03-11-county-level-health-and-covid-19.en_files\DPC Correlations.png)
+
+
+This is a case per captia correlations 
+
+
+![Case per Capita Correlations](post\2021-03-11-county-level-health-and-covid-19.en_files\CPC Correlations.png)
+
+This is a fatality rate regression tree   
+
+![Death per Case Regression Tree](post\2021-03-11-county-level-health-and-covid-19.en_files\DPC Tree.png)
+
+This is a case per captia regression tree  
+
+![Case per Capita Regression Tree](post\2021-03-11-county-level-health-and-covid-19.en_files\CPC Tree.png)

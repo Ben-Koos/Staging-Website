@@ -7,13 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>ben2koos@gmail.com (Ben Koos)</managingEditor>
     <webMaster>ben2koos@gmail.com (Ben Koos)</webMaster>
-    <lastBuildDate>Sun, 13 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>COVID-19</title>
       <link>/tags/covid-19/</link>
-      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
       <author>ben2koos@gmail.com (Ben Koos)</author>
       <guid>/tags/covid-19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regression</title>
+      <link>/tags/regression/</link>
+      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
+      <author>ben2koos@gmail.com (Ben Koos)</author>
+      <guid>/tags/regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regression Tree</title>
+      <link>/tags/regression-tree/</link>
+      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
+      <author>ben2koos@gmail.com (Ben Koos)</author>
+      <guid>/tags/regression-tree/</guid>
       <description></description>
     </item>
     
@@ -113,15 +131,6 @@
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       <author>ben2koos@gmail.com (Ben Koos)</author>
       <guid>/tags/r-markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>regression</title>
-      <link>/tags/regression/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      <author>ben2koos@gmail.com (Ben Koos)</author>
-      <guid>/tags/regression/</guid>
       <description></description>
     </item>
     

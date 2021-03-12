@@ -7,9 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>ben2koos@gmail.com (Ben Koos)</managingEditor>
     <webMaster>ben2koos@gmail.com (Ben Koos)</webMaster>
-    <lastBuildDate>Sun, 13 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/covid-19/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/covid-19/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>spread of covid 19 update</title>
+      <title>COVID County Health Regression</title>
+      <link>/post/covid-county-health-regression/</link>
+      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
+      <author>ben2koos@gmail.com (Ben Koos)</author>
+      <guid>/post/covid-county-health-regression/</guid>
+      <description>This is a fatality map
+COVID Fatality Rate Map
+This is a case per capita map
+COVID Case per Capita Map
+This is a fatality rate correlations
+Death per Case Correlations
+This is a case per captia correlations
+Case per Capita Correlations
+This is a fatality rate regression tree
+Death per Case Regression Tree
+This is a case per captia regression tree
+Case per Capita Regression Tree</description>
+    </item>
+    
+    <item>
+      <title>Spread of COVID-19 Update</title>
       <link>/post/spread-of-covid-19-update/</link>
       <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
       <author>ben2koos@gmail.com (Ben Koos)</author>
